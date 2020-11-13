@@ -12,6 +12,8 @@
 </script>
 
 <script>
+	import Document from '$components/document'
+
 	export let content
 	const page = content.items[0]
 	const sections = page.fields.sections
@@ -27,6 +29,7 @@
 {#each sections as section}
 <section id={section.fields.identifier}>
 	<h1>{section.fields.title}</h1>
+	<Document body={section.fields.body} />
 </section>
 {/each}
 
