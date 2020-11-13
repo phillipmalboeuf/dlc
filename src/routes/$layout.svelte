@@ -19,12 +19,14 @@
 
   :global(body) {
     background-color: var(--beige);
+    margin: 0 0 5rem;
+    padding: 0;
   }
 
 	main {
-		padding: 1em;
-		margin: 0 auto;
-    max-width: var(--large);
+		/* padding: 1em; */
+		/* margin: 0 auto; */
+    /* max-width: var(--large); */
 	}
 
   :global(h1, h2, h3) {
