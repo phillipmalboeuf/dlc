@@ -67,7 +67,7 @@
 	<Navigation {sections} contact={page.fields.contactUrl} playlists={page.fields.playlistsUrl} />
 </header>
 
-<section>
+<section class='intro'>
 	<Document body={page.fields.introduction} />
 </section>
 
@@ -158,5 +158,10 @@
 
 	section > h1 {
 		color: var(--brown);
+	}
+
+	section.intro {
+		columns: 2 auto;
+		column-gap: 5vw;
 	}
 </style>

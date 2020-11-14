@@ -60,7 +60,7 @@
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 0.03em;
-    line-height: 1.2;
+    line-height: 1.8;
   }
 
   :global(h6) {
