@@ -3,6 +3,10 @@
 </main>
 
 <style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
 	:global(:root) {
 		font-family: "Suisse Int'l", sans-serif;
 
