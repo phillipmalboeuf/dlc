@@ -1,9 +1,13 @@
 {
 	"name": "dlc",
 	"version": "0.0.1",
+	"engines": {
+    "node": "14"
+  },
 	"scripts": {
 		"dev": "svelte dev",
-		"build": "svelte build"
+		"build": "svelte build",
+		"start": "node build"
 	},
 	"devDependencies": {
 		"@snowpack/plugin-typescript": "^1.0.0",
