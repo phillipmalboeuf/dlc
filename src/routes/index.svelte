@@ -56,7 +56,7 @@
 	<div>
 		<h2>{page.fields.heroTopTagline}</h2>
 		<figure>
-			<Picture media={heroMedia} />
+			<Picture media={heroMedia} small />
 			<figcaption><h6>{@html heroMedia.fields.title}</h6></figcaption>
 		</figure>
 		<h2>{page.fields.heroBottomTagline}</h2>
@@ -71,10 +71,17 @@
 	<Document body={page.fields.introduction} />
 </section>
 
-{#each sections as section}
+{#each sections as section, index}
 <section id={section.fields.identifier}>
 	<h1>{section.fields.title}</h1>
 	<Document body={section.fields.body} />
+
+	{#if index === sections.length - 1}
+	<div class="buttons">
+		<a href="{page.fields.contactUrl}"><h5>{page.fields.contactUrl.replace('mailto:', '')}</h5></a>
+		<a href="{page.fields.playlistsUrl}"><h5>Playlists</h5></a>
+	</div>
+	{/if}
 </section>
 {/each}
 
@@ -119,7 +126,7 @@
 	section {
 		position: relative;
 		z-index: 1;
-		padding: 10rem 10vw;
+		padding: 10vh 10vw;
 		background: var(--beige);
 	}
 
@@ -164,4 +171,22 @@
 		columns: 2 auto;
 		column-gap: 5vw;
 	}
+
+	.buttons {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 10vh;
+	}
+
+		.buttons a {
+			width: 48%;
+			text-align: center;
+			text-decoration: none;
+			padding: 6rem;
+			border: 1px solid;
+		}
+
+		.buttons a h5 {
+			margin-bottom: 0;
+		}
 </style>

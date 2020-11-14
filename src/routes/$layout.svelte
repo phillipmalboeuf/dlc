@@ -58,6 +58,7 @@
 
   :global(h5) {
     font-size: 18px;
+    font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 0.03em;
     line-height: 1.8;
@@ -65,6 +66,7 @@
 
   :global(h6) {
     font-size: 14px;
+    font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     line-height: 1.6;
@@ -79,5 +81,14 @@
     display: block;
     font-size: 14px;
     line-height: 1.6;
+  }
+
+  :global(a) {
+    color: currentColor;
+  }
+
+  :global(a:hover),
+  :global(a:focus) {
+    color: var(--gold);
   }
 </style>
