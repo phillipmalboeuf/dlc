@@ -64,7 +64,7 @@
 </section>
 
 <header bind:this={header} class:stuck>
-	<Navigation {sections} contact={page.fields.contactUrl} playlists={page.fields.playlistsUrl} />
+	<Navigation {sections} contact={page.fields.contactUrl} playlists={page.fields.playlistsUrl} logotype={!stuck} />
 </header>
 
 <section class='intro'>
@@ -97,13 +97,13 @@
 		left: 0;
 		width: 100%;
 		background: var(--brown);
-		/* transition: background-color 333ms; */
+		transition: background-color 333ms;
 	}
 
 	header :global(a),
 	footer :global(a) {
 		color: var(--beige);
-		/* transition: color 333ms; */
+		transition: color 333ms;
 	}
 
 	header {
@@ -161,6 +161,7 @@
 			left: 0;
 			width: 100%;
 			transform: translateY(-50%);
+			color: white;
 		}
 
 	section > h1 {
