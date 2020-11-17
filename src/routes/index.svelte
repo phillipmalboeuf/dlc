@@ -56,7 +56,7 @@
 	<div>
 		<h2>{page.fields.heroTopTagline}</h2>
 		<figure>
-			<!-- <Picture media={heroMedia} small /> -->
+			<Picture media={heroMedia} small />
 			<figcaption><h6>{@html heroMedia.fields.title}</h6></figcaption>
 		</figure>
 		<h2>{page.fields.heroBottomTagline}</h2>
