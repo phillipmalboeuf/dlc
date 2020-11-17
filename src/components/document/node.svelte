@@ -1,8 +1,13 @@
 <script>
+  import { getContext } from 'svelte'
+
   import Picture from '../Picture.svelte'
+  import Works from '../Works.svelte'
   import Mark from './mark.svelte'
 
   export let node
+  const entry = getContext('entry')
+  const asset = getContext('asset')
 </script>
 
 {#if node.nodeType === 'heading-1'}
@@ -29,5 +34,7 @@
 {:else if node.nodeType === 'embedded-asset-block'}
 <Picture media={node.data.target} />
 {:else if node.nodeType === 'embedded-entry-block'}
-  
+  {#if entry(node.data.target.sys.id).sys.contentType.sys.id === 'works'}
+  <Works works={entry(node.data.target.sys.id)} />
+  {/if}
 {/if}

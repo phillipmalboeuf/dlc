@@ -12,7 +12,7 @@
 </script>
 
 <script>
-	import { onMount } from 'svelte'
+	import { onMount, setContext } from 'svelte'
 
 	import Navigation from '$components/Navigation'
 	import Document from '$components/document'
@@ -28,13 +28,15 @@
 		return content.includes.Asset.find(asset => asset.sys.id === id)
 	}
 
+	setContext('entry', entry)
+	setContext('asset', asset)
+
 	const page = content.items[0]
 	const sections = page.fields.sections
 		.map(section => entry(section.sys.id))
 
 	const heroMedia = asset(page.fields.heroMedia.sys.id)
 
-	let y
 	let header
 	let stuck
 
@@ -49,8 +51,6 @@
 
 	
 </script>
-
-<svelte:window bind:scrollY={y} />
 
 <section class='hero'>
 	<div>
@@ -124,8 +124,6 @@
 	}
 
 	section {
-		position: relative;
-		z-index: 1;
 		padding: 10vh 10vw;
 		background: var(--beige);
 	}
