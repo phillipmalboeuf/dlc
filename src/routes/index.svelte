@@ -49,6 +49,23 @@
 		observer.observe(header)
 	})
 
+	onMount(() => {
+		const observer = new IntersectionObserver( 
+			(entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						// console.log(entry.target.getAttribute('data-background'))
+						document.body.className = ''
+						document.body.classList.add(entry.target.getAttribute('data-background'))
+					}
+				})
+			},
+			{ threshold: [1] }
+		)
+
+		sections.forEach(section => observer.observe(document.getElementById(section.fields.identifier)))
+	})
+
 	
 </script>
 
@@ -72,7 +89,7 @@
 </section>
 
 {#each sections as section, index}
-<section id={section.fields.identifier} class={section.fields.background && section.fields.background.replace(' ', '').toLowerCase()}>
+<section id={section.fields.identifier} data-background={section.fields.background && section.fields.background.replace(' ', '').toLowerCase()}>
 	<h1>{section.fields.title}</h1>
 	<Document body={section.fields.body} />
 
@@ -113,8 +130,8 @@
 		z-index: 2;
 	}
 
-	header.stuck { background: var(--beige); }
-	header.stuck :global(a) { color: var(--darkbrown); }
+	header.stuck { background: var(--backgroundcolor); }
+	header.stuck :global(a) { color: var(--headingcolor); }
 
 	footer {
 		top: auto;
@@ -125,17 +142,20 @@
 
 	section {
 		padding: 10vh 10vw;
-		background: var(--beige);
+		color: var(--textcolor);
+		background: var(--backgroundcolor);
+		transition: background-color 333ms, color 333ms;
 	}
 
-	section > h1 { color: var(--brown); }
-	section.lightcamel { background: var(--lightcamel); }
-	section.gold { color: white; background: var(--gold); }
-	section.gold > h1 { color: white; }
-	section.brown { color: white; background: var(--brown); }
-	section.brown > h1 { color: white; }
-	section.darkbrown { color: white; background: var(--brown); }
-	section.darkbrown > h1 { color: white; }
+	section > h1 {
+		color: var(--headingcolor);
+		transition: color 333ms;
+	}
+
+	:global(body.lightcamel) { --backgroundcolor: var(--lightcamel) }
+	:global(body.gold) { --textcolor: white; --headingcolor: white; --backgroundcolor: var(--gold) }
+	:global(body.brown) { --textcolor: white; --headingcolor: white; --backgroundcolor: var(--brown) }
+	:global(body.darkbrown) { --textcolor: white; --headingcolor: white; --backgroundcolor: var(--darkbrown) }
 
 	section.hero {
 		padding: 2rem 10vw;

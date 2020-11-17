@@ -12,7 +12,7 @@
 
 <div class="works">
   {#each entries as work}
-  <article id="/work/{work.fields.identifier}">
+  <article>
     <h5>{work.fields.title}</h5>
     <p>{work.fields.excerpt}</p>
     {#if work.fields.linkUrl}
@@ -29,7 +29,7 @@
 {#if popupWork}
 <article class="popup" in:fly={{ y: 100 }} out:fly={{ y: -100 }} on:scroll={(e) => {
   if (e.currentTarget.scrollHeight - e.currentTarget.scrollTop === e.currentTarget.clientHeight) {
-    e.currentTarget.style.pointerEvents = 'none'
+    // e.currentTarget.style.pointerEvents = 'none'
     popupWork = undefined
   }
 }}>

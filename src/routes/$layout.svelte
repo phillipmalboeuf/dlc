@@ -19,6 +19,10 @@
     --large: 1444px;
     --medium: 1024px;
     --small: 375px;
+
+    --textcolor: black;
+    --headingcolor: var(--brown);
+    --backgroundcolor: var(--beige);
 	}
 
   :global(body) {
