@@ -56,7 +56,7 @@
 	<div>
 		<h2>{page.fields.heroTopTagline}</h2>
 		<figure>
-			<Picture media={heroMedia} small />
+			<!-- <Picture media={heroMedia} small /> -->
 			<figcaption><h6>{@html heroMedia.fields.title}</h6></figcaption>
 		</figure>
 		<h2>{page.fields.heroBottomTagline}</h2>
@@ -72,7 +72,7 @@
 </section>
 
 {#each sections as section, index}
-<section id={section.fields.identifier}>
+<section id={section.fields.identifier} class={section.fields.background && section.fields.background.replace(' ', '').toLowerCase()}>
 	<h1>{section.fields.title}</h1>
 	<Document body={section.fields.body} />
 
@@ -128,6 +128,15 @@
 		background: var(--beige);
 	}
 
+	section > h1 { color: var(--brown); }
+	section.lightcamel { background: var(--lightcamel); }
+	section.gold { color: white; background: var(--gold); }
+	section.gold > h1 { color: white; }
+	section.brown { color: white; background: var(--brown); }
+	section.brown > h1 { color: white; }
+	section.darkbrown { color: white; background: var(--brown); }
+	section.darkbrown > h1 { color: white; }
+
 	section.hero {
 		padding: 2rem 10vw;
 		height: calc(100vh - 5rem);
@@ -161,10 +170,6 @@
 			transform: translateY(-50%);
 			color: white;
 		}
-
-	section > h1 {
-		color: var(--brown);
-	}
 
 	section.intro {
 		columns: 2 auto;
