@@ -1,9 +1,12 @@
 <script>
   import { getContext, onMount } from 'svelte'
   import Slider from './Slider'
+  import Picture from './Picture'
+
   export let offerings
 
   const entry = getContext('entry')
+  const asset = getContext('asset')
   const entries = offerings.fields.offerings.map(offering => entry(offering.sys.id))
 </script>
 
@@ -13,7 +16,10 @@
     <article>
       <h6>No. {i+1}</h6>
       <h5>{offering.fields.title}</h5>
-      <p>{offering.fields.excerpt}</p>
+      <figure>
+        <Picture media={asset(offering.fields.photo.sys.id)} small />
+      </figure>
+      <small>{offering.fields.excerpt}</small>
       {#if offering.fields.linkUrl}
       {#if offering.fields.linkUrl.indexOf('http') > -1}
       <a href="{offering.fields.linkUrl}" target='blank'><h6>{offering.fields.linkLabel}</h6></a>
@@ -48,5 +54,19 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+    }
+
+    article > small {
+      height: 33%;
+      margin-bottom: 2rem;
+    }
+
+    article > h5 {
+      height: 10%;
+    }
+
+    article:last-child {
+      color: var(--beige);
+      background: var(--brown);
     }
 </style>

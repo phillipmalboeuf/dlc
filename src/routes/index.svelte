@@ -60,7 +60,7 @@
 					}
 				})
 			},
-			{ threshold: [1] }
+			{ threshold: [0.5] }
 		)
 
 		sections.forEach(section => observer.observe(document.getElementById(section.fields.identifier)))
