@@ -191,7 +191,8 @@
 			color: white;
 		}
 
-	section.intro {
+	section.intro,
+	section:not(.intro) > :global(p) {
 		columns: 2 auto;
 		column-gap: 5vw;
 	}

@@ -1,6 +1,5 @@
 <script>
   import { getContext, onMount } from 'svelte'
-  import { writable } from 'svelte/store'
   import { fly } from 'svelte/transition'
   export let works
 

@@ -2,8 +2,10 @@
   import { getContext } from 'svelte'
 
   import Picture from '../Picture.svelte'
-  import Works from '../Works.svelte'
   import Mark from './mark.svelte'
+
+  import Works from '../Works.svelte'
+  import Offerings from '../Offerings.svelte'
 
   export let node
   const entry = getContext('entry')
@@ -36,5 +38,7 @@
 {:else if node.nodeType === 'embedded-entry-block'}
   {#if entry(node.data.target.sys.id).sys.contentType.sys.id === 'works'}
   <Works works={entry(node.data.target.sys.id)} />
+  {:else if entry(node.data.target.sys.id).sys.contentType.sys.id === 'offerings'}
+  <Offerings offerings={entry(node.data.target.sys.id)} />
   {/if}
 {/if}

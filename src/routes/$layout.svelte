@@ -95,4 +95,10 @@
   :global(a:focus) {
     color: var(--gold);
   }
+
+  :global(button) {
+    font-size: inherit;
+    cursor: pointer;
+    border: none;
+  }
 </style>
