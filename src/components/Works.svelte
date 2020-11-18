@@ -37,6 +37,7 @@
     <button on:click={() => popupWork = undefined}>Close</button>
 
     <h2>{popupWork.fields.title}</h2>
+    <h6>{popupWork.fields.tags.join(' – ')}</h6>
     <p>{popupWork.fields.excerpt}</p>
   </div>
 </article>
@@ -63,6 +64,7 @@
     height: 100vh;
     overflow-y: auto;
     padding: 4rem 4rem 42vh;
+    color: black;
   }
 
   h2 {
