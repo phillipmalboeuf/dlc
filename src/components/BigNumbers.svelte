@@ -1,7 +1,5 @@
 <script>
   import { getContext, onMount } from 'svelte'
-  import Picture from './Picture'
-  import Document from './document'
 
   export let text
 </script>

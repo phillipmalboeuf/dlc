@@ -8,6 +8,7 @@
   import TextWQuote from '../TextWQuote.svelte'
   import TextWPhoto from '../TextWPhoto.svelte'
   import BigNumbers from '../BigNumbers.svelte'
+  import Approach from '../Approach.svelte'
 
   export let target
   const fetchEntry = getContext('entry')
@@ -19,6 +20,8 @@
 <Works works={entry} />
 {:else if entry.sys.contentType.sys.id === 'offerings'}
 <Offerings offerings={entry} />
+{:else if entry.sys.contentType.sys.id === 'approach'}
+<Approach approach={entry} />
 {:else if entry.sys.contentType.sys.id === 'gallery'}
 <Gallery gallery={entry} />
 {:else if entry.sys.contentType.sys.id === 'textWQuote'}

@@ -8,7 +8,7 @@
 
 <article>
   <div>
-    <h5>{text.fields.title}</h5>
+    {#if text.fields.title}<h5>{text.fields.title}</h5>{/if}
     <Document body={text.fields.body} />
   </div>
 
