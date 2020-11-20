@@ -19,17 +19,20 @@
 
 <style>
   article {
-    display: flex;
+    display: grid;
     align-items: center;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
     margin: 4rem 0;
   }
 
-    div {
+    /* div {
       width: 50%;
       padding: 4rem;
-    }
+    } */
 
     div.quote {
+      padding: 4rem;
       background: var(--beige);
     }
 </style>

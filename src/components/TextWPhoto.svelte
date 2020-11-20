@@ -20,17 +20,14 @@
 
 <style>
   article {
-    display: flex;
+    display: grid;
     align-items: center;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
     margin: 4rem 0;
   }
 
-    div {
-      width: 50%;
+    div.photo {
       padding: 4rem;
     }
-
-    /* div.photo {
-      background: var(--beige);
-    } */
 </style>

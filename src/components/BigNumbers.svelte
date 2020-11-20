@@ -17,20 +17,21 @@
 
 <style>
   article {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 4rem;
     margin: 4rem 0;
   }
 
     h5 {
       width: 100%;
-      padding: 0 4rem;
+      grid-column-start: 1;
+      grid-column-end: 3;
     }
 
     div {
-      width: 50%;
-      padding: 2rem 4rem;
+      grid-row-start: 2;
       color: var(--brown);
     }
 

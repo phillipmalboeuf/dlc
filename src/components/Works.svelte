@@ -34,10 +34,11 @@
     popupWork = undefined
   }
 }}>
+  <button on:click={() => popupWork = undefined}></button>
   <div>
     <button on:click={() => popupWork = undefined}>Close</button>
 
-    <h2>{popupWork.fields.title}</h2>
+    <h1>{popupWork.fields.title}</h1>
     <h6>{popupWork.fields.tags.join(' – ')}</h6>
     <!-- <p>{popupWork.fields.excerpt}</p> -->
 
@@ -70,6 +71,17 @@
     color: black;
   }
 
+    .popup > button {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: transparent;
+    }
+
   h2 {
     color: var(--darkbrown);
   }
@@ -77,7 +89,7 @@
     .popup > div {
       position: relative;
       background: white;
-      padding: 4rem;
+      padding: 8rem;
       min-height: 120vh;
     }
 
