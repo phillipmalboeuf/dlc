@@ -1,6 +1,8 @@
 <script>
   import { getContext, onMount } from 'svelte'
   import { fly } from 'svelte/transition'
+  import Document from './document'
+
   export let works
 
   const entry = getContext('entry')
@@ -37,7 +39,9 @@
 
     <h2>{popupWork.fields.title}</h2>
     <h6>{popupWork.fields.tags.join(' – ')}</h6>
-    <p>{popupWork.fields.excerpt}</p>
+    <!-- <p>{popupWork.fields.excerpt}</p> -->
+
+    <Document body={popupWork.fields.body} />
   </div>
 </article>
 {/if}

@@ -1,9 +1,7 @@
 <script>
-  import { getContext } from 'svelte'
-  import Audio from '../Audio'
+  import Entry from './entry'
   
   export let mark
-  const entry = getContext('entry')
 </script>
 
 {#if mark.nodeType === 'text'}
@@ -31,7 +29,5 @@
   {#each mark.content as mark}<svelte:self mark={mark} />{/each}
 </a>
 {:else if mark.nodeType === 'embedded-entry-inline'}
-  {#if entry(mark.data.target.sys.id).sys.contentType.sys.id === 'audio'}
-  <Audio audio={entry(mark.data.target.sys.id)} />
-  {/if}
+  <Entry target={mark.data.target} />
 {/if}
