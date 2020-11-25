@@ -2,8 +2,8 @@
 	"name": "dlc",
 	"version": "0.0.1",
 	"engines": {
-    "node": "14"
-  },
+		"node": "14"
+	},
 	"scripts": {
 		"dev": "svelte dev",
 		"build": "svelte build",

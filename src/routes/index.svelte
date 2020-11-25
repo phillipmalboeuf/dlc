@@ -163,6 +163,7 @@
 		text-align: center;
 		color: var(--beige);
 		background: var(--brown);
+		cursor: url('/cursor.svg') 30 30, auto;
 	}
 
 		section.hero div {

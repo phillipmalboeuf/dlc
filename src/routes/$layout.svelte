@@ -96,6 +96,11 @@
     color: var(--gold);
   }
 
+  :global(a:hover),
+  :global(button:hover) {
+    cursor: url('/smallcursor.svg') 30 30, pointer;
+  }
+
   :global(button) {
     font-size: inherit;
     cursor: pointer;
