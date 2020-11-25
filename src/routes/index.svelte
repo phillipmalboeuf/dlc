@@ -17,6 +17,7 @@
 	import Navigation from '$components/Navigation'
 	import Document from '$components/document'
 	import Picture from '$components/Picture'
+	import AnimatedText from '$components/AnimatedText'
 
 	export let content
 
@@ -71,12 +72,12 @@
 
 <section class='hero'>
 	<div>
-		<h2>{page.fields.heroTopTagline}</h2>
+		<h2><AnimatedText text={page.fields.heroTopTagline} /></h2>
 		<figure>
 			<Picture media={heroMedia} small />
 			<figcaption><h6>{@html heroMedia.fields.title}</h6></figcaption>
 		</figure>
-		<h2>{page.fields.heroBottomTagline}</h2>
+		<h2><AnimatedText text={page.fields.heroBottomTagline} /></h2>
 	</div>
 </section>
 
@@ -90,7 +91,7 @@
 
 {#each sections as section, index}
 <section id={section.fields.identifier} data-background={section.fields.background && section.fields.background.replace(' ', '').toLowerCase()}>
-	<h1>{section.fields.title}</h1>
+	<h1><AnimatedText text={section.fields.title} /></h1>
 	<Document body={section.fields.body} />
 
 	{#if index === sections.length - 1}
