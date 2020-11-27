@@ -35,4 +35,14 @@
       padding: 4rem;
       background: var(--beige);
     }
+
+  @media (max-width: 900px) {
+  article {
+    grid-template-columns: 1fr;
+  }
+
+    div.quote {
+      padding: 3rem;
+    }
+  }
 </style>

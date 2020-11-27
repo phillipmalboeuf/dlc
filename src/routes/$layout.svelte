@@ -29,6 +29,7 @@
     background-color: var(--beige);
     margin: 0 0 5rem;
     padding: 0;
+    overflow-x: hidden;
   }
 
 	main {
@@ -85,6 +86,41 @@
     display: block;
     font-size: 14px;
     line-height: 1.6;
+  }
+
+  @media (max-width: 666px) {
+  :global(h1) {
+    font-size: 60px;
+  }
+
+  :global(h2) {
+    font-size: 50px;
+  }
+
+  :global(h3) {
+    font-size: 50px;
+  }
+
+  :global(h5) {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  :global(h6) {
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+  }
+
+  :global(p) {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  :global(small) {
+    font-size: 12px;
+    line-height: 1.6;
+  }
   }
 
   :global(a) {

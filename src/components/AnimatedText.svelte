@@ -17,9 +17,7 @@
 </script>
 
 <div class:visible bind:this={element}>
-  {#each text.split(' ') as word, i}
-  <div><span style="transition-delay: {i*66}ms;">{word}&nbsp;</span></div>
-  {/each}
+  {#each text.split(' ') as word, i}<div><span style="transition-delay: {i*66}ms;">{word}&nbsp;</span></div>{/each}
 </div>
 
 <style>

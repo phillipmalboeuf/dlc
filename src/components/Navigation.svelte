@@ -38,7 +38,13 @@
 	}
 
   div {
-    width: 33%;
+    width: 42%;
+  }
+
+  @media (max-width: 900px) {
+  div {
+    display: none;
+  }
   }
 
   div:last-child {

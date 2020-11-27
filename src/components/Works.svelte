@@ -59,6 +59,16 @@
       padding-top: 6rem;
     }
 
+  @media (max-width: 900px) {
+  .works {
+    grid-template-columns: 1fr;
+  }
+
+    .works > article {
+      padding-top: 4rem;
+    }
+  }
+
   .popup {
     position: fixed;
     z-index: 30;
@@ -102,4 +112,14 @@
       background: transparent;
       padding: 1rem;
     }
+
+  @media (max-width: 900px) {
+    .popup {
+      padding: 0 0 33vh;
+    }
+
+      .popup > div {
+        padding: 4rem 1rem;
+      }
+  }
 </style>

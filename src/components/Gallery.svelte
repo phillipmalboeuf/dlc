@@ -30,4 +30,10 @@
     height: 66vh;
     object-fit: contain;
   }
+
+  @media (max-width: 900px) {
+  figure {
+    padding: 0;
+  }
+  }
 </style>

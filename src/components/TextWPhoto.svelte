@@ -30,4 +30,14 @@
     div.photo {
       padding: 4rem;
     }
+
+  @media (max-width: 900px) {
+  article {
+    grid-template-columns: 1fr;
+  }
+
+    div.photo {
+      padding: 0;
+    }
+  }
 </style>

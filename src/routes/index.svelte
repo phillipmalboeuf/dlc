@@ -148,6 +148,12 @@
 		transition: background-color 333ms, color 333ms;
 	}
 
+	@media (max-width: 900px) {
+	section {
+		padding: 5vh 5vw;
+	}
+	}
+
 	section > h1 {
 		color: var(--headingcolor);
 		transition: color 333ms;
@@ -180,6 +186,16 @@
     	object-position: center;
 		}
 
+	@media (max-width: 900px) {
+	section.hero {
+		padding: 0.66rem;
+	}
+
+		section.hero div {
+			padding: 0.33rem;
+		}
+	}
+
 	figure {
 		position: relative;
 		margin: 0;
@@ -199,8 +215,20 @@
 		column-gap: 5vw;
 	}
 
+	@media (max-width: 900px) {
+	section.intro,
+	section:not(.intro) > :global(p) {
+		columns: auto;
+	}
+
+	section.intro {
+		text-align: center;
+	}
+	}
+
 	.buttons {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 		margin-top: 10vh;
 	}
@@ -209,11 +237,21 @@
 			width: 48%;
 			text-align: center;
 			text-decoration: none;
-			padding: 6rem;
+			padding: 6rem 0;
 			border: 1px solid;
 		}
 
 		.buttons a h5 {
 			margin-bottom: 0;
 		}
+
+	@media (max-width: 900px) {
+		.buttons a {
+			width: 100%;
+		}
+
+		.buttons a + a {
+			margin-top: 1rem;
+		}
+	}
 </style>

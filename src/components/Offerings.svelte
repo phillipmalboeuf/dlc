@@ -56,6 +56,12 @@
       justify-content: space-between;
     }
 
+    @media (max-width: 900px) {
+    article {
+      width: 100%;
+    }
+    }
+
     article > small {
       height: 33%;
       margin-bottom: 2rem;

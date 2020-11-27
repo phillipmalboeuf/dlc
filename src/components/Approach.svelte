@@ -74,6 +74,26 @@
       grid-row-end: 4;
     }
 
+  @media (max-width: 900px) {
+  section {
+    padding: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+    article:nth-child(n) {
+      text-align: center;
+      grid-column-start: 1;
+      grid-row-start: auto;
+    }
+
+    figure {
+      grid-row-start: 4;
+      grid-row-end: auto;
+      grid-column-start: 1;
+    }
+  }
+
     h5 {
       margin-bottom: 0rem;
     }

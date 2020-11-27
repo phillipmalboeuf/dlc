@@ -41,7 +41,22 @@
       margin: 2rem 0;
     }
 
-    /* div.photo {
-      background: var(--beige);
-    } */
+  @media (max-width: 900px) {
+  article {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  h5 {
+    grid-column-end: auto;
+  }
+  
+  div {
+    grid-row-start: auto;
+  }
+
+  hr {
+    margin: 0.5rem 0;
+  }
+  }
 </style>
