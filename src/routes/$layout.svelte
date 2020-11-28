@@ -25,11 +25,23 @@
     --backgroundcolor: var(--beige);
 	}
 
+  :global(html) {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    scroll-behavior: smooth;
+  }
+
   :global(body) {
     background-color: var(--beige);
     margin: 0 0 5rem;
     padding: 0;
-    overflow-x: hidden;
+  }
+
+  @media (max-width: 900px) {
+  :global(body) {
+    margin-bottom: 12rem;
+  }
   }
 
 	main {
@@ -88,7 +100,7 @@
     line-height: 1.6;
   }
 
-  @media (max-width: 666px) {
+  @media (max-width: 900px) {
   :global(h1) {
     font-size: 60px;
   }

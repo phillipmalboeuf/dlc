@@ -82,17 +82,17 @@
 </section>
 
 <header bind:this={header} class:stuck>
-	<Navigation {sections} contact={page.fields.contactUrl} playlists={page.fields.playlistsUrl} logotype={!stuck} />
+	<Navigation {sections} contact={page.fields.contactUrl} playlists={page.fields.playlistsUrl} logotype={!stuck} menu />
 </header>
 
-<section class='intro'>
+<section class='intro' id={'manifesto'}>
 	<Document body={page.fields.introduction} />
 </section>
 
 {#each sections as section, index}
 <section id={section.fields.identifier} data-background={section.fields.background && section.fields.background.replace(' ', '').toLowerCase()}>
 	<h1><AnimatedText text={section.fields.title} /></h1>
-	<Document body={section.fields.body} />
+	<!-- <Document body={section.fields.body} /> -->
 
 	{#if index === sections.length - 1}
 	<div class="buttons">
@@ -131,6 +131,12 @@
 		z-index: 2;
 	}
 
+	@media (max-width: 900px) {
+	header {
+		position: fixed;
+	}
+	}
+
 	header.stuck { background: var(--backgroundcolor); }
 	header.stuck :global(a) { color: var(--headingcolor); }
 
@@ -151,6 +157,7 @@
 	@media (max-width: 900px) {
 	section {
 		padding: 5vh 5vw;
+		scroll-margin-top: 3rem;
 	}
 	}
 
@@ -186,9 +193,21 @@
     	object-position: center;
 		}
 
+	@media (max-width: 1200px) {
+	section.hero {
+		padding: 2rem 5vw;
+		height: auto;
+	}
+
+		section.hero div {
+			padding: 0.5rem;
+		}
+	}
+
 	@media (max-width: 900px) {
 	section.hero {
-		padding: 0.66rem;
+		padding: 1rem;
+		margin-top: 4rem;
 	}
 
 		section.hero div {
