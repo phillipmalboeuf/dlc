@@ -92,7 +92,7 @@
 {#each sections as section, index}
 <section id={section.fields.identifier} data-background={section.fields.background && section.fields.background.replace(' ', '').toLowerCase()}>
 	<h1><AnimatedText text={section.fields.title} /></h1>
-	<!-- <Document body={section.fields.body} /> -->
+	<Document body={section.fields.body} />
 
 	{#if index === sections.length - 1}
 	<div class="buttons">
