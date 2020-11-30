@@ -46,6 +46,7 @@
 
 <style>
   button {
+    display: none;
     outline: none;
     position: fixed;
     top: 0;
@@ -54,6 +55,10 @@
     border: none;
     background: transparent;
     padding: 1.33rem 1rem;
+  }
+
+  @media (max-width: 900px) {
+    button { display: block; }
   }
 
     button line {

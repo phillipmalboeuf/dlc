@@ -56,12 +56,6 @@
       justify-content: space-between;
     }
 
-    @media (max-width: 900px) {
-    article {
-      width: 100%;
-    }
-    }
-
     article > small {
       height: 33%;
       margin-bottom: 2rem;
@@ -74,5 +68,26 @@
     article:last-child {
       color: var(--beige);
       background: var(--brown);
+    }
+
+    @media (max-width: 900px) {
+    article {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    article:last-child {
+      height: 42vh;
+    }
+
+    .offerings :global(.slides) {
+      display: block !important;
+      width: 100% !important;
+    }
+
+    .offerings :global(.controls) {
+      display: none !important;
+    }
     }
 </style>

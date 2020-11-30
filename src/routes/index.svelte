@@ -18,6 +18,7 @@
 	import Document from '$components/document'
 	import Picture from '$components/Picture'
 	import AnimatedText from '$components/AnimatedText'
+	import Sections from '$components/Sections'
 
 	export let content
 
@@ -50,22 +51,22 @@
 		observer.observe(header)
 	})
 
-	onMount(() => {
-		const observer = new IntersectionObserver( 
-			(entries) => {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						// console.log(entry.target.getAttribute('data-background'))
-						document.body.className = ''
-						document.body.classList.add(entry.target.getAttribute('data-background'))
-					}
-				})
-			},
-			{ threshold: [0.5] }
-		)
+	// onMount(() => {
+	// 	const observer = new IntersectionObserver( 
+	// 		(entries) => {
+	// 			entries.forEach(entry => {
+	// 				if (entry.isIntersecting) {
+	// 					// console.log(entry.target.getAttribute('data-background'))
+	// 					document.body.className = ''
+	// 					document.body.classList.add(entry.target.getAttribute('data-background'))
+	// 				}
+	// 			})
+	// 		},
+	// 		{ threshold: [0.5] }
+	// 	)
 
-		sections.forEach(section => observer.observe(document.getElementById(section.fields.identifier)))
-	})
+	// 	sections.forEach(section => observer.observe(document.getElementById(section.fields.identifier)))
+	// })
 
 	
 </script>
@@ -89,19 +90,7 @@
 	<Document body={page.fields.introduction} />
 </section>
 
-{#each sections as section, index}
-<section id={section.fields.identifier} data-background={section.fields.background && section.fields.background.replace(' ', '').toLowerCase()}>
-	<h1><AnimatedText text={section.fields.title} /></h1>
-	<Document body={section.fields.body} />
-
-	{#if index === sections.length - 1}
-	<div class="buttons">
-		<a href="{page.fields.contactUrl}"><h5>{page.fields.contactUrl.replace('mailto:', '')}</h5></a>
-		<a href="{page.fields.playlistsUrl}"><h5>Playlists</h5></a>
-	</div>
-	{/if}
-</section>
-{/each}
+<Sections sections={sections} contactUrl={page.fields.contactUrl} playlistsUrl={page.fields.playlistsUrl} />
 
 <footer>
 	<Navigation {sections} contact={page.fields.contactUrl} playlists={page.fields.playlistsUrl} />
@@ -149,9 +138,7 @@
 
 	section {
 		padding: 10vh 10vw;
-		color: var(--textcolor);
 		background: var(--backgroundcolor);
-		transition: background-color 333ms, color 333ms;
 	}
 
 	@media (max-width: 900px) {
@@ -160,12 +147,7 @@
 		scroll-margin-top: 3rem;
 	}
 	}
-
-	section > h1 {
-		color: var(--headingcolor);
-		transition: color 333ms;
-	}
-
+	
 	:global(body.lightcamel) { --backgroundcolor: var(--lightcamel) }
 	:global(body.gold) { --textcolor: white; --headingcolor: white; --backgroundcolor: var(--gold) }
 	:global(body.brown) { --textcolor: white; --headingcolor: white; --backgroundcolor: var(--brown) }
@@ -243,34 +225,5 @@
 	section.intro {
 		text-align: center;
 	}
-	}
-
-	.buttons {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		margin-top: 10vh;
-	}
-
-		.buttons a {
-			width: 48%;
-			text-align: center;
-			text-decoration: none;
-			padding: 6rem 0;
-			border: 1px solid;
-		}
-
-		.buttons a h5 {
-			margin-bottom: 0;
-		}
-
-	@media (max-width: 900px) {
-		.buttons a {
-			width: 100%;
-		}
-
-		.buttons a + a {
-			margin-top: 1rem;
-		}
 	}
 </style>

@@ -34,7 +34,7 @@
     </div>
   </div>
 
-  <div class="buttons">
+  <div class="controls">
     <button on:click={previous}>❮</button>
     <button on:click={next}>❯</button>
   </div>
@@ -53,7 +53,7 @@
     position: relative;
   }
 
-  .buttons {
+  .controls {
     position: absolute;
     top: 50%;
     right: 0;

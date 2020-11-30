@@ -25,7 +25,7 @@
   section {
     border: 1px solid;
     padding: 4rem;
-    margin: 4rem 0;
+    margin: 2rem 0;
 
     display: grid;
     align-items: center;
