@@ -50,24 +50,6 @@
 
 		observer.observe(header)
 	})
-
-	// onMount(() => {
-	// 	const observer = new IntersectionObserver( 
-	// 		(entries) => {
-	// 			entries.forEach(entry => {
-	// 				if (entry.isIntersecting) {
-	// 					// console.log(entry.target.getAttribute('data-background'))
-	// 					document.body.className = ''
-	// 					document.body.classList.add(entry.target.getAttribute('data-background'))
-	// 				}
-	// 			})
-	// 		},
-	// 		{ threshold: [0.5] }
-	// 	)
-
-	// 	sections.forEach(section => observer.observe(document.getElementById(section.fields.identifier)))
-	// })
-
 	
 </script>
 
@@ -139,6 +121,7 @@
 	section {
 		padding: 10vh 10vw;
 		background: var(--backgroundcolor);
+		transition: background-color 333ms, color 333ms;
 	}
 
 	@media (max-width: 900px) {
@@ -147,11 +130,6 @@
 		scroll-margin-top: 3rem;
 	}
 	}
-	
-	:global(body.lightcamel) { --backgroundcolor: var(--lightcamel) }
-	:global(body.gold) { --textcolor: white; --headingcolor: white; --backgroundcolor: var(--gold) }
-	:global(body.brown) { --textcolor: white; --headingcolor: white; --backgroundcolor: var(--brown) }
-	:global(body.darkbrown) { --textcolor: white; --headingcolor: white; --backgroundcolor: var(--darkbrown) }
 
 	section.hero {
 		padding: 2rem 10vw;

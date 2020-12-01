@@ -1,4 +1,6 @@
 <script>
+  import { onMount } from 'svelte'
+
   import AnimatedText from '$components/AnimatedText'
   import Document from '$components/document'
 
@@ -7,6 +9,24 @@
   export let sections
 
   let open = {}
+
+  onMount(() => {
+		const observer = new IntersectionObserver( 
+			(entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						// console.log(entry.target.getAttribute('data-background'))
+						document.body.classList.add(entry.target.getAttribute('data-background'))
+					} else {
+            document.body.classList.remove(entry.target.getAttribute('data-background'))
+          }
+				})
+			},
+			{ threshold: [0.5], rootMargin: '50px 0px' }
+		)
+
+		sections.forEach(section => observer.observe(document.getElementById(section.fields.identifier)))
+	})
 </script>
 
 
@@ -55,6 +75,13 @@
       background: transparent;
     }
 
+  @media (min-width: 900px) {
+  :global(body.lightcamel) { --backgroundcolor: var(--lightcamel) }
+	:global(body.gold) { --textcolor: white; --headingcolor: white; --backgroundcolor: var(--gold) }
+	:global(body.brown) { --textcolor: white; --headingcolor: white; --backgroundcolor: var(--brown) }
+	:global(body.darkbrown) { --textcolor: white; --headingcolor: white; --backgroundcolor: var(--darkbrown) }
+  }
+
   @media (max-width: 900px) {
 	section {
 		padding: 0 5vw 1rem;
@@ -75,7 +102,7 @@
     transition: height 666ms;
   }
 
-  .open .body {
+  section.open .body {
     height: auto;
   }
 	}

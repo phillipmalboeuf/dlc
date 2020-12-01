@@ -62,8 +62,7 @@
   }
 
     button line {
-      /* stroke: white; */
-      stroke: var(--brown);
+      stroke: var(--textcolor);
     }
 
     button.open line {
