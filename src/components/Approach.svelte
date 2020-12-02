@@ -14,7 +14,7 @@
   {#each entries as step, i}
   <article>
     <h5><sup>{i}</sup> {step.fields.title}</h5>
-    <Document body={step.fields.body} />
+    <small><Document body={step.fields.body} /></small>
   </article>
   {/each}
 

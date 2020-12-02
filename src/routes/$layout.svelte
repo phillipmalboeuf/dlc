@@ -95,7 +95,8 @@
     line-height: 1.8;
   }
 
-  :global(small) {
+  :global(small),
+  :global(small p) {
     display: block;
     font-size: 14px;
     line-height: 1.6;
