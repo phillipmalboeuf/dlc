@@ -52,6 +52,7 @@
 
   :global(h1, h2, h3) {
     font-family: "Voyage", 'Times New Roman', Times, serif;
+    font-weight: normal;
     text-transform: uppercase;
     line-height: 1;
     margin: 0 auto 1rem;
