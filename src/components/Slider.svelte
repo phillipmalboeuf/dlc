@@ -35,8 +35,12 @@
   </div>
 
   <div class="controls">
-    <button on:click={previous}>❮</button>
-    <button on:click={next}>❯</button>
+    <button class='previous' on:click={previous}>
+      <svg width="24" height="24" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 23.0212L1.99999 12L13 0.978824" stroke="white" stroke-width="2"/></svg>
+    </button>
+    <button class='next' on:click={next}>
+      <svg width="24" height="24" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 0.97876L12 12L1 23.0212" stroke="white" stroke-width="2"/></svg>
+    </button>
   </div>
 </div>
 
@@ -64,9 +68,12 @@
     button {
       color: white;
       background: var(--gold);
-      padding: 1rem;
+      padding: 0.88rem 1rem 0.8rem;
       border: none;
       display: block;
       margin: 0.5rem 0;
     }
+
+      button.previous { padding-left: 0.66rem; }
+      button.next { padding-right: 0.66rem; }
 </style>
