@@ -28,6 +28,7 @@
 
   figure :global(img) {
     height: 66vh;
+    width: 100%;
     object-fit: contain;
   }
 

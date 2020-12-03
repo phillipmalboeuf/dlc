@@ -13,9 +13,9 @@
     <Document body={text.fields.body} />
   </div>
 
-  <div class:photo={true} class={text.fields.align}>
+  <figure class={text.fields.align}>
     <Picture media={asset(text.fields.photo.sys.id)} />
-  </div>
+  </figure>
 </article>
 
 <style>
@@ -27,16 +27,17 @@
     margin: 4rem 0;
   }
 
-    div.photo {
+    figure {
+      margin-left: auto;
       padding: 4rem;
     }
 
-    div.photo.Top {
+    figure.Top {
       padding-top: 0;
       align-self: flex-start;
     }
 
-    div.photo.Bottom {
+    figure.Bottom {
       padding-bottom: 0;
       align-self: flex-end;
     }
@@ -46,7 +47,7 @@
     grid-template-columns: 1fr;
   }
 
-    div.photo {
+    figure {
       padding: 0;
     }
   }
