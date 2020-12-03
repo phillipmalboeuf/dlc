@@ -15,7 +15,7 @@
   {#each entries as work}
   <article>
     <h5>{work.fields.title}</h5>
-    <p>{work.fields.excerpt}</p>
+    <small>{work.fields.excerpt}</small>
     {#if work.fields.linkUrl}
     {#if work.fields.linkUrl.indexOf('http') > -1}
     <a href="{work.fields.linkUrl}" target='blank'><h6>{work.fields.linkLabel}</h6></a>
