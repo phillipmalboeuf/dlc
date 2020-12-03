@@ -93,6 +93,7 @@
   :global(p) {
     font-size: 18px;
     line-height: 1.8;
+    white-space: pre-line;
   }
 
   :global(small),

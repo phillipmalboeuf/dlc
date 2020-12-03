@@ -42,7 +42,7 @@
     <h6>{popupWork.fields.tags.join(' – ')}</h6>
     <!-- <p>{popupWork.fields.excerpt}</p> -->
 
-    <Document body={popupWork.fields.body} />
+    <small><Document body={popupWork.fields.body} /></small>
   </div>
 </article>
 {/if}
@@ -80,6 +80,11 @@
     padding: 4rem 4rem 42vh;
     color: black;
   }
+
+    .popup small > :global(p) {
+      columns: 2 auto;
+		  column-gap: 5vw;
+    }
 
     .popup > button {
       position: absolute;
