@@ -153,9 +153,6 @@
 		section.hero :global(img) {
 			margin: 2rem 0;
 			width: 276px;
-			/* height: 50vh;
-			object-fit: cover;
-    	object-position: center; */
 		}
 
 	@media (max-width: 1200px) {

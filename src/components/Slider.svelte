@@ -6,12 +6,6 @@
 
   let slider
 
-  onMount(() => {
-		// slider.addEventListener('scroll', e => {
-    //   console.log(e)
-    // })
-	})
-
   function previous() {
     slider.scrollBy({
       behavior: 'smooth',
@@ -47,6 +41,21 @@
 <style>
   .slider {
     overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding-bottom: 3rem;
+  }
+
+  .slider::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .slider::-webkit-scrollbar-thumb {
+    background: var(--gold);
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
   }
 
   .slides {
@@ -55,10 +64,12 @@
 
   .container {
     position: relative;
+    border-bottom: 1px solid black;
   }
 
   .controls {
     position: absolute;
+    z-index: 1;
     top: 50%;
     right: 0;
     text-align: right;
@@ -76,4 +87,4 @@
 
       button.previous { padding-left: 0.66rem; }
       button.next { padding-right: 0.66rem; }
-</style>
+</style> 
