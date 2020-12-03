@@ -79,7 +79,7 @@
     font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 0.03em;
-    line-height: 1.8;
+    line-height: 1.222;
   }
 
   :global(h6) {
