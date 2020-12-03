@@ -144,14 +144,18 @@
 		section.hero div {
 			padding: 1rem;
 			border: 1px solid;
+			min-height: 85vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 		}
 
 		section.hero :global(img) {
 			margin: 2rem 0;
-			width: 50vh;
-			height: 50vh;
+			width: 276px;
+			/* height: 50vh;
 			object-fit: cover;
-    	object-position: center;
+    	object-position: center; */
 		}
 
 	@media (max-width: 1200px) {
@@ -162,6 +166,10 @@
 
 		section.hero div {
 			padding: 0.5rem;
+		}
+
+		section.hero :global(img) {
+			width: 206px;
 		}
 	}
 
