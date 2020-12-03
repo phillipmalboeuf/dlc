@@ -15,7 +15,6 @@
 			(entries) => {
 				entries.forEach(entry => {
 					if (entry.isIntersecting) {
-						// console.log(entry.target.getAttribute('data-background'))
 						document.body.classList.add(entry.target.getAttribute('data-background'))
 					} else {
             document.body.classList.remove(entry.target.getAttribute('data-background'))

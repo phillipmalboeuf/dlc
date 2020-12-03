@@ -13,7 +13,7 @@
     <Document body={text.fields.body} />
   </div>
 
-  <div class="photo">
+  <div class:photo={true} class={text.fields.align}>
     <Picture media={asset(text.fields.photo.sys.id)} />
   </div>
 </article>
@@ -29,6 +29,16 @@
 
     div.photo {
       padding: 4rem;
+    }
+
+    div.photo.Top {
+      padding-top: 0;
+      align-self: flex-start;
+    }
+
+    div.photo.Bottom {
+      padding-bottom: 0;
+      align-self: flex-end;
     }
 
   @media (max-width: 900px) {
