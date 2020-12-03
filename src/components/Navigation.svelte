@@ -45,7 +45,7 @@
 	}
 
   div {
-    width: 42%;
+    width: 50%;
   }
 
   div:last-child {

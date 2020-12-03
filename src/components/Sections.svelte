@@ -57,6 +57,12 @@
 		transition: background-color 333ms, color 333ms;
 	}
 
+  @media (max-width: 1200px) {
+  section {
+		padding: 5vh 5vw;
+  }
+  }
+
   .title {
     display: flex;
     padding-top: 1rem;

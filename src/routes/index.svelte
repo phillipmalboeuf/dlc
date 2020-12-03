@@ -120,11 +120,12 @@
 
 	section {
 		padding: 10vh 10vw;
+		color: var(--textcolor);
 		background: var(--backgroundcolor);
 		transition: background-color 333ms, color 333ms;
 	}
 
-	@media (max-width: 900px) {
+	@media (max-width: 1200px) {
 	section {
 		padding: 5vh 5vw;
 		scroll-margin-top: 3rem;

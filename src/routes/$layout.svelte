@@ -102,17 +102,17 @@
     line-height: 1.6;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
   :global(h1) {
-    font-size: 60px;
+    font-size: 120px;
   }
 
   :global(h2) {
-    font-size: 50px;
+    font-size: 75px;
   }
 
   :global(h3) {
-    font-size: 50px;
+    font-size: 56px;
   }
 
   :global(h5) {
@@ -121,7 +121,7 @@
   }
 
   :global(h6) {
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 0.05em;
     line-height: 1.6;
   }
@@ -134,6 +134,20 @@
   :global(small) {
     font-size: 12px;
     line-height: 1.6;
+  }
+  }
+
+  @media (max-width: 900px) {
+  :global(h1) {
+    font-size: 60px;
+  }
+
+  :global(h2) {
+    font-size: 50px;
+  }
+
+  :global(h3) {
+    font-size: 50px;
   }
   }
 

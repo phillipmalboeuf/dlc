@@ -74,9 +74,14 @@
       grid-row-end: 4;
     }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
   section {
     padding: 2rem;
+  }
+  }
+
+  @media (max-width: 900px) {
+  section {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }

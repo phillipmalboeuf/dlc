@@ -92,7 +92,7 @@
       background: transparent;
     }
 
-  h2 {
+  h1 {
     color: var(--darkbrown);
   }
 
@@ -113,11 +113,17 @@
       padding: 1rem;
     }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     .popup {
       padding: 0 0 33vh;
     }
 
+      .popup > div {
+        padding: 4rem;
+      }
+  }
+
+  @media (max-width: 900px) {
       .popup > div {
         padding: 4rem 1rem;
       }
