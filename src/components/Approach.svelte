@@ -69,10 +69,14 @@
     }
 
     figure {
+      border-radius: 50%;
+      overflow: hidden;
       grid-column-start: 2;
       grid-row-start: 2;
       grid-row-end: 4;
     }
+
+    figure :global(video) { display: block; }
 
   @media (max-width: 1200px) {
   section {
