@@ -13,7 +13,7 @@
 <section>
   {#each entries as step, i}
   <article>
-    <h5><sup>{i}</sup> {step.fields.title}</h5>
+    <h5><sup>{i + 1}</sup> {step.fields.title}</h5>
     <small><Document body={step.fields.body} /></small>
   </article>
   {/each}
@@ -34,6 +34,12 @@
     column-gap: 2rem;
     row-gap: 2rem;
   }
+
+    article small {
+      margin-top: 0.5rem;
+      max-width: 250px;
+      display: inline-block;
+    }
 
     article:nth-child(1) {
       grid-column-start: 2;
