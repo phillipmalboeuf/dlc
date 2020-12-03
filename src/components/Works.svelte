@@ -38,7 +38,7 @@
   <div>
     <button on:click={() => popupWork = undefined}>Close</button>
 
-    <h1>{popupWork.fields.title}</h1>
+    <h2>{popupWork.fields.title}</h2>
     <h6>{popupWork.fields.tags.join(' – ')}</h6>
     <!-- <p>{popupWork.fields.excerpt}</p> -->
 
@@ -92,7 +92,7 @@
       background: transparent;
     }
 
-  h1 {
+  h2 {
     color: var(--darkbrown);
   }
 

@@ -127,6 +127,11 @@
 			border: 1px solid;
 		}
 
+    .buttons a:hover,
+    .buttons a:focus {
+      color: var(--brown);
+    }
+
 		.buttons a h5 {
 			margin-bottom: 0;
 		}

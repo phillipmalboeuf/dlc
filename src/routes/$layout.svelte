@@ -152,6 +152,7 @@
   }
 
   :global(a) {
+    outline: none;
     color: currentColor;
   }
 
@@ -166,6 +167,7 @@
   }
 
   :global(button) {
+    outline: none;
     font-size: inherit;
     cursor: pointer;
     border: none;
