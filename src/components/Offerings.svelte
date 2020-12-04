@@ -79,7 +79,7 @@
     article {
       text-align: center;
       border: 1px solid;
-      padding: 2rem;
+      padding: 1.5rem 2rem;
       margin-right: 1rem;
       width: 30vw;
 
@@ -102,16 +102,48 @@
     }
 
     article > small {
-      height: 33%;
-      margin-bottom: 2rem;
+      height: 42%;
+      margin-bottom: 3rem;
     }
 
     article > h5 {
+      margin: 2rem 0;
       height: 10%;
     }
 
     article h6 {
       font-size: 13px;
+    }
+    
+    figure {
+      margin: 2rem 0;
+    }
+
+    figure :global(img) {
+      width: 147px;
+      height: 196px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 1200px) {
+    article > h5 { margin: 1rem; }
+    figure { margin: 1rem 0; }
+    figure :global(img) {
+      width: 111px;
+      height: 151px;
+    }
+    }
+
+    @media (max-width: 900px) {
+    figure { margin: 0.5rem 0; }
+    figure :global(img) {
+      width: 92px;
+      height: 135px;
+    }
+    }
+
+    article a:last-child {
+      justify-self: flex-end;
     }
 
     @media (max-width: 1200px) {
@@ -128,7 +160,7 @@
     @media (max-width: 900px) {
     article {
       width: 100%;
-      padding: 0.5rem;
+      padding: 0.5rem 1rem;
       margin-bottom: 1rem;
     }
 
