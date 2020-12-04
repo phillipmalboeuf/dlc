@@ -25,7 +25,7 @@
 
 <audio bind:duration bind:paused bind:currentTime src={file.fields.file.url} loop preload='metadata' />
 <article>
-  <button on:pointerenter={start} on:pointerleave={stop} on:click={toggle}>{audio.fields.label} 🎧</button>
+  <button on:click={toggle}>{audio.fields.label} 🎧</button>
   <span style="width: {currentTime / duration * 100}%"></span>
 </article>
 
