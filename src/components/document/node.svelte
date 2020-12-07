@@ -6,6 +6,12 @@
   export let node
 </script>
 
+<style>
+  h5 {
+    line-height: 1.8;
+  }
+</style>
+
 {#if node.nodeType === 'heading-1'}
   <h1>{#each node.content as mark}<Mark mark={mark} />{/each}</h1>
 {:else if node.nodeType === 'heading-2'}
