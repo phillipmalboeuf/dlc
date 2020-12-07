@@ -1,11 +1,12 @@
 <script>
   import { getContext } from 'svelte'
+  import { fly } from 'svelte/transition'
 
   const asset = getContext('asset')
   export let audio
   let file = asset(audio.fields.audio.sys.id)
 
-  let duration
+  // let duration
   let currentTime = 0
   let paused = true
 
@@ -14,20 +15,19 @@
   }
 
   function stop() {
-    currentTime = 0
+    // currentTime = 0
     paused = true
-  }
-
-  function toggle() {
-    paused = !paused
   }
 </script>
 
-<audio bind:duration bind:paused bind:currentTime src={file.fields.file.url} loop preload='metadata' />
+<audio bind:paused bind:currentTime src={file.fields.file.url} loop preload='metadata' />
 <article>
-  <button on:click={toggle}>{audio.fields.label}</button>
-  <span style="width: {currentTime / duration * 100}%"></span>
+  <button on:click={() => paused ? start() : stop()}>{audio.fields.label}</button>
 </article>
+
+{#if !paused}
+<button on:click={stop} transition:fly={{ y: 66 }} class="control">Volume On <span>Pause</span></button>
+{/if}
 
 <style>
   article {
@@ -48,11 +48,22 @@
     line-height: inherit;
   }
 
-  span {
-    position: absolute;
-    bottom: 2px;
-    left: 0;
-    width: 0;
-    border-bottom: 2px solid;
+  button.control {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    text-transform: none;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    color: var(--backgroundcolor);
+    background: var(--headingcolor);
+    border-radius: 2rem;
   }
+
+    button > span {
+      margin-left: 0.5em;
+      text-decoration: underline;
+    }
 </style>
