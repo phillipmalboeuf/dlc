@@ -39,6 +39,7 @@
   @media (max-width: 900px) {
   article {
     grid-template-columns: 1fr;
+    margin: 2rem 0;
   }
 
     div.quote {

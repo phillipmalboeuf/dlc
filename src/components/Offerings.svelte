@@ -113,6 +113,7 @@
 
     article h6 {
       font-size: 13px;
+      margin-bottom: 0;
     }
     
     figure {
@@ -165,7 +166,7 @@
     }
 
     article:last-child {
-      height: 42vh;
+      height: 420px;
     }
 
     .offerings :global(.slides) {

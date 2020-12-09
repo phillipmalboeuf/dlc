@@ -119,6 +119,10 @@
       text-transform: uppercase;
     }
 
+    .popup > div > h6 {
+      margin: 2rem 0;
+    }
+
   @media (max-width: 1200px) {
     .popup {
       padding: 0 0 33vh;

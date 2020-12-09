@@ -55,19 +55,20 @@
     border: none;
     background: transparent;
     padding: 1.33rem 1rem;
+    color: var(--textcolor);
   }
+
+  button.open {
+    color: var(--brown);
+  }
+
+    button line {
+      stroke: currentColor;
+    }
 
   @media (max-width: 900px) {
     button { display: block; }
   }
-
-    button line {
-      stroke: var(--textcolor);
-    }
-
-    button.open line {
-      stroke: var(--brown);
-    }
 
   nav {
     position: fixed;

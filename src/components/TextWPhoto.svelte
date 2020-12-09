@@ -45,10 +45,20 @@
   @media (max-width: 900px) {
   article {
     grid-template-columns: 1fr;
+    margin: 2rem 0;
   }
 
     figure {
       padding: 0;
+    }
+
+    figure.Top {
+      margin: 0 0 2rem auto;
+      order: -1;
+    }
+
+    figure :global(img) {
+      max-height: 245px;
     }
   }
 </style>

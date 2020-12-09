@@ -40,7 +40,9 @@
 	const heroMedia = asset(page.fields.heroMedia.sys.id)
 
 	let header
+	let hero
 	let stuck
+	let scrolled
 
 	onMount(() => {
 		const observer = new IntersectionObserver( 
@@ -49,11 +51,18 @@
 		)
 
 		observer.observe(header)
+
+		const scrolledObserver = new IntersectionObserver( 
+			([e]) => scrolled = !e.isIntersecting,
+			{ threshold: [0] }
+		)
+
+		scrolledObserver.observe(hero)
 	})
 	
 </script>
 
-<section class='hero'>
+<section bind:this={hero} class='hero'>
 	<div>
 		<h2><AnimatedText text={page.fields.heroTopTagline} /></h2>
 		<figure>
@@ -64,7 +73,7 @@
 	</div>
 </section>
 
-<header bind:this={header} class:stuck>
+<header bind:this={header} class:stuck class:scrolled>
 	<Navigation {sections} contact={page.fields.contactUrl} playlists={page.fields.playlistsUrl} logotype={!stuck} menu />
 </header>
 
@@ -108,8 +117,9 @@
 	}
 	}
 
-	header.stuck { background: var(--backgroundcolor); }
-	header.stuck :global(a) { color: var(--headingcolor); }
+	header.scrolled { background: var(--backgroundcolor); }
+	header.scrolled :global(a) { color: var(--headingcolor); }
+	header:not(.scrolled) :global(.menu > button) { color: var(--backgroundcolor); }
 
 	footer {
 		top: auto;
@@ -144,7 +154,7 @@
 		section.hero div {
 			padding: 1rem;
 			border: 1px solid;
-			min-height: 85vh;
+			min-height: 80vh;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
@@ -155,7 +165,7 @@
 			width: 276px;
 		}
 
-	@media (max-width: 1200px) {
+	@media (max-height: 900px) {
 	section.hero {
 		padding: 2rem 5vw;
 		height: auto;
