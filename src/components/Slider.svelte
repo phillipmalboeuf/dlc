@@ -29,11 +29,11 @@
   </div>
 
   <div class="controls">
-    <button class='previous' on:click={previous}>
-      <svg width="24" height="24" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 23.0212L1.99999 12L13 0.978824" stroke="white" stroke-width="2"/></svg>
-    </button>
     <button class='next' on:click={next}>
       <svg width="24" height="24" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 0.97876L12 12L1 23.0212" stroke="white" stroke-width="2"/></svg>
+    </button>
+    <button class='previous' on:click={previous}>
+      <svg width="24" height="24" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 23.0212L1.99999 12L13 0.978824" stroke="white" stroke-width="2"/></svg>
     </button>
   </div>
 </div>
