@@ -37,8 +37,13 @@
 
     article small {
       margin-top: 0.5rem;
+      margin-bottom: 0;
       max-width: 250px;
       display: inline-block;
+    }
+
+    article small :global(p) {
+      margin-bottom: 0;
     }
 
     article:nth-child(1) {
@@ -85,9 +90,10 @@
 
     figure :global(video) { display: block; }
 
-  @media (max-width: 1200px) {
+  @media (max-height: 900px) {
   section {
-    padding: 2rem;
+    padding: 1rem;
+    row-gap: 0rem;
   }
   }
 
@@ -95,6 +101,7 @@
   section {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    row-gap: 2rem;
   }
 
     article:nth-child(n) {
