@@ -32,9 +32,26 @@
     object-fit: contain;
   }
 
+  div :global(.controls) {
+    pointer-events: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+    div :global(.controls button) {
+      pointer-events: auto;
+    }
+    div :global(.controls .previous) {
+      order: -1;
+    }
+
   @media (max-width: 900px) {
   figure {
     padding: 0;
+  }
+
+  figure :global(img) {
+    height: 42vh;
   }
   }
 </style>
