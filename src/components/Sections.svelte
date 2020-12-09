@@ -40,6 +40,7 @@
   </div>
 
   {#if index === sections.length - 1}
+  <div class="title" style="margin-top: 1rem;"></div>
   <div class="buttons">
     <a href="{contactUrl}"><h5>{contactUrl.replace('mailto:', '')}</h5></a>
     <a href="{playlistsUrl}"><h5>Playlists</h5></a>
@@ -70,6 +71,7 @@
     .title > h1 {
       color: var(--headingcolor);
       margin-left: 0;
+      margin-bottom: 0;
       transition: color 333ms;
     }
 
@@ -139,6 +141,7 @@
 	@media (max-width: 900px) {
 		.buttons a {
 			width: 100%;
+      padding: 4rem 0;
 		}
 
 		.buttons a + a {

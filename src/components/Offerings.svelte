@@ -176,5 +176,9 @@
     .offerings :global(.controls) {
       display: none !important;
     }
+
+    .offerings :global(.container) {
+      border-bottom: none;
+    }
     }
 </style>

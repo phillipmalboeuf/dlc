@@ -117,7 +117,7 @@
   }
 
   :global(h5) {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.2;
   }
 

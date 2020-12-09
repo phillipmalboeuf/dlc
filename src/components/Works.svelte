@@ -116,6 +116,7 @@
       border: none;
       background: transparent;
       padding: 1rem;
+      text-transform: uppercase;
     }
 
   @media (max-width: 1200px) {
@@ -131,6 +132,10 @@
   @media (max-width: 900px) {
       .popup > div {
         padding: 4rem 1rem;
+      }
+
+      .popup small > :global(p) {
+        columns: auto;
       }
   }
 </style>
