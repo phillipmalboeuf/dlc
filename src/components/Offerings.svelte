@@ -112,7 +112,7 @@
     }
 
     article h6 {
-      font-size: 13px;
+      /* font-size: 13px; */
       margin-bottom: 0;
     }
     
