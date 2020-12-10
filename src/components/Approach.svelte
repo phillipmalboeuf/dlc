@@ -88,7 +88,10 @@
       grid-row-end: 4;
     }
 
-    figure :global(video) { display: block; }
+    figure :global(video) {
+      display: block;
+      border-radius: 50%;
+    }
 
   @media (max-height: 900px) {
   section {
