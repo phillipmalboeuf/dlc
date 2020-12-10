@@ -75,7 +75,7 @@
   }
 
   :global(h5) {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 0.03em;
@@ -83,7 +83,7 @@
   }
 
   :global(h6) {
-    font-size: 14px;
+    font-size: 10px;
     font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -91,7 +91,7 @@
   }
 
   :global(p) {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.8;
     white-space: pre-line;
   }
@@ -99,7 +99,7 @@
   :global(small),
   :global(small p) {
     display: block;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.6;
   }
 
@@ -116,7 +116,7 @@
     font-size: 56px;
   }
 
-  :global(h5) {
+  /* :global(h5) {
     font-size: 14px;
     line-height: 1.2;
   }
@@ -135,7 +135,7 @@
   :global(small) {
     font-size: 12px;
     line-height: 1.6;
-  }
+  } */
   }
 
   @media (max-width: 900px) {
