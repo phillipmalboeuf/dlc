@@ -53,7 +53,7 @@
     }
 
     figure.Top {
-      margin: 0 0 2rem auto;
+      margin: 0 auto 2rem;
       order: -1;
     }
 
