@@ -188,6 +188,7 @@
 
 		section.hero div {
 			padding: 0.33rem;
+			min-height: auto;
 		}
 	}
 
@@ -203,6 +204,10 @@
 			transform: translateY(-50%);
 			color: white;
 		}
+
+			figcaption h6 {
+				margin-bottom: 0;
+			}
 
 	section.intro,
 	section:not(.intro) > :global(p) {
