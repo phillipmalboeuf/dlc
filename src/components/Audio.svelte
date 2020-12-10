@@ -54,6 +54,7 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
+    font-size: 1rem;
     text-transform: none;
     text-decoration: none;
     padding: 0.5rem 1rem;

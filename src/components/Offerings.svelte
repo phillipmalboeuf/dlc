@@ -2,6 +2,7 @@
   import { getContext, onMount } from 'svelte'
   import Slider from './Slider'
   import Picture from './Picture'
+  import Audio from './Audio'
 
   export let offerings
 
@@ -20,11 +21,18 @@
         <Picture media={asset(offering.fields.photo.sys.id)} small />
       </figure>
       <small>{offering.fields.excerpt}</small>
+      {#if offering.fields.linkAudio}
+      <h6><Audio audio={{ fields: {
+        label: offering.fields.linkLabel,
+        audio: offering.fields.linkAudio
+      } }} /></h6>
+      {:else}
       {#if offering.fields.linkUrl}
       {#if offering.fields.linkUrl.indexOf('http') > -1}
       <a href="{offering.fields.linkUrl}" target='blank'><h6>{offering.fields.linkLabel}</h6></a>
       {:else}
       <a href="#{offering.fields.linkUrl}"><h6>{offering.fields.linkLabel}</h6></a>
+      {/if}
       {/if}
       {/if}
     </article>
