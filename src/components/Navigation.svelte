@@ -15,7 +15,7 @@
 
   <div>
 	{#each sections as section}
-	<a href="#{section.fields.identifier}"><h6>{section.fields.title}</h6></a>
+	<a href="#{section.fields.identifier}"><h5>{section.fields.title}</h5></a>
 	{/each}
   </div>
 
@@ -29,8 +29,8 @@
 
   <div>
 	
-	<a href="{contact}" target="_blank"><h6>Contact</h6></a>
-  <a href="{playlists}" target="_blank"><h6>Playlists</h6></a>
+	<a href="{contact}" target="_blank"><h5>Contact</h5></a>
+  <a href="{playlists}" target="_blank"><h5>Playlists</h5></a>
 	
   </div>
 </nav>
