@@ -56,7 +56,7 @@
     right: 0;
     height: 100%;
     width: 10%;
-    background: linear-gradient(90deg, transparent, var(--backgroundcolor));
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), var(--backgroundcolor));
   }
 
   @media (max-width: 1200px) {
