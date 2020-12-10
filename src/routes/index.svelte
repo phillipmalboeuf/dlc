@@ -67,7 +67,7 @@
 		<h2><AnimatedText text={page.fields.heroTopTagline} /></h2>
 		<figure>
 			<Picture media={heroMedia} small />
-			<figcaption><h6>{@html heroMedia.fields.title}</h6></figcaption>
+			<figcaption><h5>{@html heroMedia.fields.title}</h5></figcaption>
 		</figure>
 		<h2><AnimatedText text={page.fields.heroBottomTagline} /></h2>
 	</div>
