@@ -92,7 +92,7 @@
 		color: var(--gold);
 	}
 
-	a > h6 {
+	a > h5 {
 		display: inline-block;
 		margin: 0;
 	}
