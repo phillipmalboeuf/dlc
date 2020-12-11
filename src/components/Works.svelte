@@ -11,7 +11,7 @@
   let popupWork
 
   onMount(() => {
-    popupWork = entries.find(work => work.fields.identifier === window.location.hash)
+    popupWork = entries.find(work => work.fields.identifier === window.location.hash.replace('#', ''))
 	})
 </script>
 
