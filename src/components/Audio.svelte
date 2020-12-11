@@ -1,3 +1,7 @@
+<script context="module">
+  let current
+</script>
+
 <script>
   import { getContext } from 'svelte'
   import { fly } from 'svelte/transition'
@@ -6,21 +10,23 @@
   export let audio
   let file = asset(audio.fields.audio.sys.id)
 
-  // let duration
-  let currentTime = 0
   let paused = true
+  let player
 
   function start() {
+    if (current) { current.pause() }
+
+    current = player
     paused = false
   }
 
   function stop() {
-    // currentTime = 0
+    current = undefined
     paused = true
   }
 </script>
 
-<audio bind:paused bind:currentTime src={file.fields.file.url} loop preload='metadata' />
+<audio bind:this={player} bind:paused src={file.fields.file.url} loop preload='metadata' />
 <article>
   <button on:click={() => paused ? start() : stop()}>{audio.fields.label}</button>
 </article>
