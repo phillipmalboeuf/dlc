@@ -205,23 +205,28 @@
 			color: white;
 		}
 
-			figcaption h6 {
+			figcaption h5 {
 				margin-bottom: 0;
 			}
 
-	section.intro,
+	section.intro {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+    column-gap: 5vw;
+	}
+
 	section:not(.intro) > :global(p) {
 		columns: 2 auto;
 		column-gap: 5vw;
 	}
 
 	@media (max-width: 900px) {
-	section.intro,
 	section:not(.intro) > :global(p) {
 		columns: auto;
 	}
 
 	section.intro {
+		display: block;
 		text-align: center;
 	}
 	}
