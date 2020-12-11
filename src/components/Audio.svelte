@@ -41,10 +41,13 @@
     display: inline;
     border: none;
     background: none;
+    color: var(--textcolor);
+    transform: translate(0,0);
     font-size: inherit;
     text-decoration: underline;
     text-transform: inherit;
     padding: 0;
+    margin: 0;
     line-height: inherit;
   }
 
