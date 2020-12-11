@@ -9,19 +9,21 @@
   const entries = works.fields.works.map(work => entry(work.sys.id))
 
   let popupWork
+
+  onMount(() => {
+    popupWork = entries.find(work => work.fields.identifier === window.location.hash)
+	})
 </script>
 
 <div class="works">
   {#each entries as work}
-  <article>
+  <article id={work.fields.identifier}>
     <h5>{work.fields.title}</h5>
     <small><p>{work.fields.excerpt}</p></small>
     {#if work.fields.linkUrl}
-    {#if work.fields.linkUrl.indexOf('http') > -1}
     <a href="{work.fields.linkUrl}" target='blank'><h6>{work.fields.linkLabel}</h6></a>
-    {:else}
-    <a href="#{work.fields.linkUrl}" on:click={() => popupWork = work}><h6>{work.fields.linkLabel}</h6></a>
-    {/if}
+    {:else if work.fields.linkLabel}
+    <a href="#{work.fields.identifier}" on:click={() => popupWork = work}><h6>{work.fields.linkLabel}</h6></a>
     {/if}
   </article>
   {/each}
@@ -42,7 +44,7 @@
     <h6>{popupWork.fields.tags.join(' – ')}</h6>
     <!-- <p>{popupWork.fields.excerpt}</p> -->
 
-    <small><Document body={popupWork.fields.body} /></small>
+    {#if popupWork.fields.body}<small><Document body={popupWork.fields.body} /></small>{/if}
   </div>
 </article>
 {/if}
