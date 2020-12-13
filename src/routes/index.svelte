@@ -134,6 +134,11 @@
 		background: var(--backgroundcolor);
 		transition: background-color 333ms, color 333ms;
 	}
+	
+	section.intro {
+		padding-top: 12vh;
+		padding-bottom: 8vh;
+	}
 
 	@media (max-width: 1200px) {
 	section {
@@ -181,6 +186,11 @@
 	}
 
 	@media (max-width: 900px) {
+	section.intro {
+		padding-top: 6vh;
+		padding-bottom: 4vh;
+	}
+	
 	section.hero {
 		padding: 1rem;
 		margin-top: 4rem;
