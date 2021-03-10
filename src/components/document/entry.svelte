@@ -7,6 +7,7 @@
   import Gallery from '../Gallery.svelte'
   import TextWQuote from '../TextWQuote.svelte'
   import TextWPhoto from '../TextWPhoto.svelte'
+  import Photos from '../Photos.svelte'
   import BigNumbers from '../BigNumbers.svelte'
   import Approach from '../Approach.svelte'
 
@@ -28,6 +29,8 @@
 <TextWQuote text={entry} />
 {:else if entry.sys.contentType.sys.id === 'textWPhoto'}
 <TextWPhoto text={entry} />
+{:else if entry.sys.contentType.sys.id === 'photos'}
+<Photos photos={entry} />
 {:else if entry.sys.contentType.sys.id === 'bigNumbers'}
 <BigNumbers text={entry} />
 {:else if entry.sys.contentType.sys.id === 'audio'}
