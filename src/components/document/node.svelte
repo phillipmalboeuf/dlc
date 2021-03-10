@@ -10,6 +10,11 @@
   h5 {
     line-height: 1.8;
   }
+
+  blockquote {
+    color: var(--brown);
+    text-align: center;
+  }
 </style>
 
 {#if node.nodeType === 'heading-1'}
@@ -33,7 +38,7 @@
   </ul>
 
 {:else if node.nodeType === 'blockquote'}
-  <blockquote>{#each node.content as code}<svelte:self node={code} />{/each}</blockquote>
+  <blockquote><h2>{#each node.content as code}<svelte:self node={code} />{/each}</h2></blockquote>
 
 {:else if node.nodeType === 'embedded-asset-block'}
 <Picture media={node.data.target} />

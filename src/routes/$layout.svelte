@@ -62,8 +62,10 @@
     font-size: 150px;
   }
 
-  :global(h2) {
+  :global(h2),
+  :global(blockquote h2 p) {
     font-size: 90px;
+    line-height: 1;
   }
 
   :global(h3) {
@@ -108,7 +110,8 @@
     font-size: 120px;
   }
 
-  :global(h2) {
+  :global(h2),
+  :global(blockquote h2 p) {
     font-size: 75px;
   }
 
@@ -143,7 +146,8 @@
     font-size: 60px;
   }
 
-  :global(h2) {
+  :global(h2),
+  :global(blockquote h2 p) {
     font-size: 50px;
   }
 
