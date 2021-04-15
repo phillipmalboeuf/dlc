@@ -93,6 +93,7 @@
 	section {
 		padding: 0 5vw 1rem;
 		scroll-margin-top: 4rem;
+    scroll-snap-margin-top: 4rem;
 	}
 
   .title {

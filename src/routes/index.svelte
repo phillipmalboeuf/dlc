@@ -144,6 +144,7 @@
 	section {
 		padding: 5vh 5vw;
 		scroll-margin-top: 3rem;
+		scroll-snap-margin-top: 3rem;
 	}
 	}
 
