@@ -32,7 +32,7 @@
 </article>
 
 {#if !paused}
-<button on:click={stop} transition:fly={{ y: 66 }} class="control">Volume On <span>Pause</span></button>
+<button on:click={stop} transition:fly|global={{ y: 66 }} class="control">Volume On <span>Pause</span></button>
 {/if}
 
 <style>

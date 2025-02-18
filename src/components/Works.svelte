@@ -30,7 +30,7 @@
 </div>
 
 {#if popupWork}
-<article class="popup" in:fly={{ y: 100 }} out:fly={{ y: -100 }} on:scroll={(e) => {
+<article class="popup" in:fly|global={{ y: 100 }} out:fly|global={{ y: -100 }} on:scroll={(e) => {
   if (e.currentTarget.scrollHeight - e.currentTarget.scrollTop === e.currentTarget.clientHeight) {
     // e.currentTarget.style.pointerEvents = 'none'
     popupWork = undefined

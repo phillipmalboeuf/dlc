@@ -24,7 +24,7 @@
 </button>
 
 {#if open}
-<nav in:fly={{ y: -100 }} out:fly={{ y: -100 }}>
+<nav in:fly|global={{ y: -100 }} out:fly|global={{ y: -100 }}>
   <div>
     <a href="#manifesto" on:click={() => open = false}><h5>Manifesto</h5></a>
     {#each sections as section}
