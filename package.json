@@ -16,8 +16,8 @@
 		"@sveltejs/kit": "^1.0.0-next.1",
 		"@sveltejs/snowpack-config": "^1.0.0-next.0",
 		"snowpack": "^3.0.13",
-		"svelte": "^3.35.0",
-		"svelte-preprocess": "^4.6.9",
+		"svelte": "3.35.0",
+		"svelte-preprocess": "4.6.9",
 		"tslib": "^2.0.0",
 		"typescript": "^4.0.0"
 	},
