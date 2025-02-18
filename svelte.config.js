@@ -1,18 +1,18 @@
-const sveltePreprocess = require('svelte-preprocess');
-module.exports = {
-    // Consult https://github.com/sveltejs/svelte-preprocess
-    // for more information about preprocessors
-    preprocess: sveltePreprocess(),
-	// By default, `npm run build` will create a standard Node app.
-	// You can create optimized builds for different platforms by
-	// specifying a different adapter
-	kit: {
-		// By default, `npm run build` will create a standard Node app.
-		// You can create optimized builds for different platforms by
-		// specifying a different adapter
-		adapter: '@sveltejs/adapter-node',
+import adapter from '@sveltejs/adapter-auto';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
-		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte'
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	// Consult https://svelte.dev/docs/kit/integrations
+	// for more information about preprocessors
+	preprocess: vitePreprocess(),
+
+	kit: {
+		// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
+		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
+		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
+		adapter: adapter()
 	}
 };
+
+export default config;

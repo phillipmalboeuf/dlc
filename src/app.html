@@ -3,15 +3,15 @@
 <head>
 	<meta charset="utf-8">
 
-	<link rel="icon" href="/favicon-16x16.png" sizes="16x16">
-	<link rel="icon" href="/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" href="%sveltekit.assets%/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" href="%sveltekit.assets%/favicon-32x32.png" sizes="32x32">
 
-	<link rel="shortcut icon" sizes="192x192" href="/android-chrome-192x192.png">
-	<link rel="shortcut icon" sizes="512x512" href="/android-chrome-512x512.png">
+	<link rel="shortcut icon" sizes="192x192" href="%sveltekit.assets%/android-chrome-192x192.png">
+	<link rel="shortcut icon" sizes="512x512" href="%sveltekit.assets%/android-chrome-512x512.png">
 
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link rel="apple-touch-icon" href="%sveltekit.assets%/apple-touch-icon.png">
 
-	<meta name="msapplication-config" content="/browserconfig.xml" />
+	<meta name="msapplication-config" content="%sveltekit.assets%/browserconfig.xml" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name='theme-color' content='#614632'>
@@ -19,13 +19,13 @@
 	<style>
 		@font-face {
 			font-family: 'Voyage';
-			src: url('/Voyage-Regular.woff2') format('woff2'),
-				url('/Voyage-Regular.woff') format('woff');
+			src: url('%sveltekit.assets%/Voyage-Regular.woff2') format('woff2'),
+				url('%sveltekit.assets%/Voyage-Regular.woff') format('woff');
 		}
 	</style>
-	%svelte.head%
+	%sveltekit.head%
 </head>
 <body>
-	<div id="svelte">%svelte.body%</div>
+	<div id="svelte">%sveltekit.body%</div>
 </body>
 </html>

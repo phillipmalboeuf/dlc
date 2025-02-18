@@ -1,14 +1,16 @@
 <script context="module">
-	const contentful = {
-		space: '4pr30xezuxn1',
-		accessToken: '7vJK8ulctiSCdZ0qukMt1VazK-JKWaDAYk9kY2YoYy8'
-	}
+	throw new Error("@migration task: Check code was safely removed (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292722)");
 
-	export async function preload({ params, query }) {
-		const response = await this.fetch(`https://cdn.contentful.com/spaces/${contentful.space}/entries?access_token=${contentful.accessToken}&content_type=page&include=4`)
+	// const contentful = {
+	// 	space: '4pr30xezuxn1',
+	// 	accessToken: '7vJK8ulctiSCdZ0qukMt1VazK-JKWaDAYk9kY2YoYy8'
+	// }
 
-		return { content: (await response.json()) }
-	}
+	// export async function preload({ params, query }) {
+	// 	const response = await this.fetch(`https://cdn.contentful.com/spaces/${contentful.space}/entries?access_token=${contentful.accessToken}&content_type=page&include=4`)
+
+	// 	return { content: (await response.json()) }
+	// }
 </script>
 
 <script>
