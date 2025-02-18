@@ -2,12 +2,12 @@
 	"name": "dlc",
 	"version": "0.0.1",
 	"engines": {
-		"node": "20"
+		"node": "22"
 	},
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
-		"start": "svelte-kit start --port 5000"
+		"start": "svelte-kit start"
 	},
 	"devDependencies": {
 		"@snowpack/plugin-typescript": "^1.2.1",
